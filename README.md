@@ -50,7 +50,7 @@ Selector de todo el contenido de la página
  });
 ```
 
-## SELECTOR BY ID
+### SELECTOR BY ID
 ___
 
 Selecciona mediante el ID
@@ -62,7 +62,7 @@ $(document).ready(function () {
     });
 });
 ```
-## SELECTOR BY CLASS
+### SELECTOR BY CLASS
 ___
 Selecciona mediante la clase
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
 });
 ```
 
-## COMBINED SELECTORS
+### COMBINED SELECTORS
 ___
 
 Permite que distintos selectores ejecuten el mismo bloque de código.
@@ -85,7 +85,7 @@ $(document).ready(function () {
      });
 });
 ```
-## FIRST SELECTOR
+### FIRST SELECTOR
 ___
 Solo el primer selector que esté en el código HTML.
 ```
@@ -96,7 +96,7 @@ $(document).ready(function () {
 });
 ```
 
-## ODD AND EVEN SELECTOR
+### ODD AND EVEN SELECTOR
 ___
 Solo aplica el código en función de si el selector es par o impar, odd es impar, even es par. Empieza a contar desde 0
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
 
 ```
-### Ejemplo: Alternando colores en una tabla con Jquery
+#### Ejemplo: Alternando colores en una tabla con Jquery
 Seleccionando los elementos 'tr' y la condición 'even' e 'odd' podemos alternar los colores en una tabla, en los impares pondrá la tabla de color morado y en los pares grises con letras en blanco.
 ```
 $(document).ready(function () {
@@ -125,7 +125,7 @@ $(document).ready(function () {
     $("tr:even").css("color", "white");
 });
 ```
-## ELEMENT AND CLASS SELECTOR
+### ELEMENT AND CLASS SELECTOR
 ___
 
 Permite seleccionar mediante el elemento y la clase, en este caso selecciona los elementos 'p' que contengan la clase 'divclass1' y le añade un texto con la función append y le pone un fondo gris usando la función .css.
@@ -136,7 +136,17 @@ $(document).ready(function () {
 });
 
 ```
-## THIS SELECTOR
+### CHILD SELECTOR
+___
+Permite seleccionar los elementos anidados en otro elemento, por ejemplo, esté fragmento seleccionará todos los span que estén dentro de un elemento 'p' y a su vez estén dentro de un 'div' y les añadirá el texto.
+
+```
+$(document).ready(function () {
+    $("div>p>span").append(" Something appended in a child element");
+});
+```
+
+### THIS SELECTOR
 ___
 Muestra los datos del selector seleccionado, por ejemplo 
 ```
