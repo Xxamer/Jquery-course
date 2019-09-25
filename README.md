@@ -1,4 +1,4 @@
-# JQUERY 
+# JQUERY MASTERCLASS
 ---
 Esta documentación son apuntes realizados de una masterclass de Jquery y AJAX
 
