@@ -116,12 +116,33 @@ $(document).ready(function () {
 
 
 ```
+### Ejemplo: Alternando colores en una tabla con Jquery
+Seleccionando los elementos 'tr' y la condición 'even' e 'odd' podemos alternar los colores en una tabla, en los impares pondrá la tabla de color morado y en los pares grises con letras en blanco.
+```
+$(document).ready(function () {
+    $("tr:odd").css("background-color", "purple");
+    $("tr:even").css("background-color", "grey");
+    $("tr:even").css("color", "white");
+});
+```
+## ELEMENT AND CLASS SELECTOR
+___
 
+Permite seleccionar mediante el elemento y la clase, en este caso selecciona los elementos 'p' que contengan la clase 'divclass1' y le añade un texto con la función append y le pone un fondo gris usando la función .css.
+```
+$(document).ready(function () {
+    $("p.divclass1").css("background-color", "grey");
+    $("p.divclass1").append(" Textappended");
+});
+
+```
 ## THIS SELECTOR
 ___
-Muestra los datos del selector
-
-` console.log ($(this)); `
-
-Oculta lo que contenga el selector
-` $(this).hide();`
+Muestra los datos del selector seleccionado, por ejemplo 
+```
+$(document).ready(function () {
+    $("div").click(function () {
+        console.log ($(this));
+    });
+});
+```
